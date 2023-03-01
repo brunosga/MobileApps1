@@ -20,7 +20,7 @@ class ContactAdapter(private val contactArray: Array<Contact>): RecyclerView.Ada
         holder.nameTextView.text = contactArray[position].name
         holder.phoneTextView.text = contactArray[position].phone
         if (position == 2) {
-            contactArray[2].name = "John Doe"
+            contactArray[2].name = "John Bobo"
             holder.nameTextView.text = contactArray[position].name
         }
     }
