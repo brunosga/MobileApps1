@@ -4,15 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/eren"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
+
     <TextView
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Bruno Almeida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvCourse"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer Science"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvGithub"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGithub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="brunosga"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvCourse"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnNextActivity"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Education"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextActivity2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCourse" />
+
+    <Button
+        android:id="@+id/btnNextActivity2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Skills"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextActivity3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNextActivity" />
+
+    <Button
+        android:id="@+id/btnNextActivity3"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Achievements"
+        app:layout_constraintBottom_toTopOf="@+id/btnCloseApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNextActivity2" />
+
+    <Button
+        android:id="@+id/btnCloseApp"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNextActivity3" />
+
+    <LinearLayout
+        android:layout_width="414dp"
+        android:layout_height="29dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvCopyright"
+            android:layout_width="394dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="(c) 2023 Bruno Almeida. All rights reserved."
+            android:paddingTop="10dp"
+            android:textAlignment="center" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
